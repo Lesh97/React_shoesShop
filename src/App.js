@@ -3,11 +3,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import "./App.css";
 import data from "./data";
-import { useState } from "react";
+import { createContext, useState } from "react";
 import { Routes, Route, Link, useNavigate, Outlet } from "react-router-dom";
 import Detail from "./routes/Detail";
 import Product from "./components/Product";
 import axios from "axios";
+
+let Context1 = createContext();
 
 function App() {
   let [shoes, setShoes] = useState(data);
@@ -15,6 +17,7 @@ function App() {
   function countDown() {
     setCount(count + 1);
   }
+  let [stock, setStock] = useState([10, 11, 12]);
 
   let navigate = useNavigate();
   return (
@@ -29,13 +32,6 @@ function App() {
               }}
             >
               Home
-            </Nav.Link>
-            <Nav.Link
-              onClick={() => {
-                navigate("/detail");
-              }}
-            >
-              Detail
             </Nav.Link>
             <Nav.Link
               onClick={() => {
@@ -66,6 +62,35 @@ function App() {
                     return <Product shoes={shoes[i]} i={i} />;
                   })}
                 </div>
+                <button
+                  onClick={() => {
+                    countDown();
+                    console.log(count);
+                    count === 0
+                      ? axios
+                          .get("https://codingapple1.github.io/shop/data2.json")
+                          .then((newShoes) => {
+                            let updateShoes = [...shoes, ...newShoes.data];
+                            setShoes(updateShoes);
+                          })
+                          .catch(() => {
+                            console.log("통신실패");
+                          })
+                      : count === 1
+                      ? axios
+                          .get("https://codingapple1.github.io/shop/data3.json")
+                          .then((newShoes) => {
+                            let updateShoes = [...shoes, ...newShoes.data];
+                            setShoes(updateShoes);
+                          })
+                          .catch(() => {
+                            console.log("통신실패");
+                          })
+                      : alert("상품정보를 모두 불러왔습니다.");
+                  }}
+                >
+                  상품 더보기
+                </button>
               </div>
             </>
           }
@@ -84,36 +109,6 @@ function App() {
 
         <Route path="*" element={<div>404</div>} />
       </Routes>
-
-      <button
-        onClick={() => {
-          countDown();
-          console.log(count);
-          count === 0
-            ? axios
-                .get("https://codingapple1.github.io/shop/data2.json")
-                .then((newShoes) => {
-                  let updateShoes = [...shoes, ...newShoes.data];
-                  setShoes(updateShoes);
-                })
-                .catch(() => {
-                  console.log("통신실패");
-                })
-            : count === 1
-            ? axios
-                .get("https://codingapple1.github.io/shop/data3.json")
-                .then((newShoes) => {
-                  let updateShoes = [...shoes, ...newShoes.data];
-                  setShoes(updateShoes);
-                })
-                .catch(() => {
-                  console.log("통신실패");
-                })
-            : alert("상품정보를 모두 불러왔습니다.");
-        }}
-      >
-        상품 더보기
-      </button>
     </div>
   );
 }

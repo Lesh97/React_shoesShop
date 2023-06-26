@@ -5,6 +5,10 @@ import "../App.css";
 
 function Detail(props) {
   let { id } = useParams();
+  let findProd = props.shoes.find(function (f) {
+    return f.id == id;
+  });
+
   let [countdown, setCountdown] = useState(true);
   //useEffect : 업데이트, 마운트시 작동
   useEffect(() => {
@@ -24,13 +28,17 @@ function Detail(props) {
     }
   }, [warning]);
 
-  let findProd = props.shoes.find(function (f) {
-    return f.id == id;
-  });
-
   let [tab, setTab] = useState(0);
+  let [detailFade, setDetailFade] = useState("");
+  useEffect(() => {
+    setDetailFade("end");
+    return () => {
+      setDetailFade("");
+    };
+  }, []);
+
   return (
-    <div className="container">
+    <div className={"container start " + detailFade}>
       {countdown === true ? (
         <div className="alert alert-warning">10초이내 구매시 할인</div>
       ) : null}
@@ -39,7 +47,7 @@ function Detail(props) {
           <img
             src={
               "https://codingapple1.github.io/shop/shoes" +
-              (props.shoes.i + 1) +
+              (findProd.id + 1) +
               ".jpg"
             }
             width="100%"
@@ -91,11 +99,11 @@ function Detail(props) {
           </Nav.Link>
         </Nav.Item>
       </Nav>
-      <TabComponent tab={tab} />
+      <TabComponent shoes={props.shoes} tab={tab} />
     </div>
   );
 }
-function TabComponent({ tab }) {
+function TabComponent({ tab, shoes }) {
   let [fade, setFade] = useState("");
   useEffect(() => {
     let aniTime = setTimeout(() => {
