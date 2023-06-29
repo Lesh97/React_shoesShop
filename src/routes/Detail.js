@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Nav } from "react-bootstrap";
+import { addItem } from "../store";
+import { useDispatch } from "react-redux";
 import "../App.css";
 
 function Detail(props) {
@@ -8,8 +10,11 @@ function Detail(props) {
   let findProd = props.shoes.find(function (f) {
     return f.id == id;
   });
-
   let [countdown, setCountdown] = useState(true);
+  let [warning, setWarning] = useState("");
+  let [tab, setTab] = useState(0);
+  let [detailFade, setDetailFade] = useState("");
+  let dispatch = useDispatch();
   //useEffect : 업데이트, 마운트시 작동
   useEffect(() => {
     //html이 랜더링되고 나서 실행됨. 복잡한 연산을 뒤로 미뤄 효율성 증가
@@ -21,15 +26,12 @@ function Detail(props) {
     };
   }, []);
 
-  let [warning, setWarning] = useState("");
   useEffect(() => {
     if (isNaN(warning) == true) {
       alert("숫자만 입력하세요");
     }
   }, [warning]);
 
-  let [tab, setTab] = useState(0);
-  let [detailFade, setDetailFade] = useState("");
   useEffect(() => {
     setDetailFade("end");
     return () => {
@@ -64,7 +66,16 @@ function Detail(props) {
           <h4 className="pt-5">{findProd.title}</h4>
           <p>{findProd.content}</p>
           <p>{findProd.price}원</p>
-          <button className="btn btn-danger">주문하기</button>
+          <button
+            className="btn btn-danger"
+            onClick={() => {
+              dispatch(
+                addItem({ id: findProd.id, name: findProd.title, count: 1 })
+              );
+            }}
+          >
+            주문하기
+          </button>
         </div>
       </div>
       <Nav variant="tabs" defaultActiveKey="link0">
