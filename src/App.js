@@ -3,13 +3,19 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import "./App.css";
 import data from "./data";
-import { createContext, useState } from "react";
-import { Routes, Route, Link, useNavigate, Outlet } from "react-router-dom";
+import { createContext, useEffect, useState } from "react";
+import {
+  Routes,
+  Route,
+  Link,
+  useNavigate,
+  Outlet,
+  useParams,
+} from "react-router-dom";
 import Detail from "./routes/Detail";
 import Product from "./components/Product";
 import axios from "axios";
-
-let Context1 = createContext();
+import Cart from "./routes/Cart";
 
 function App() {
   let [shoes, setShoes] = useState(data);
@@ -17,9 +23,8 @@ function App() {
   function countDown() {
     setCount(count + 1);
   }
-  let [stock, setStock] = useState([10, 11, 12]);
-
   let navigate = useNavigate();
+
   return (
     <div className="App">
       <Navbar bg="dark" variant="dark">
@@ -46,6 +51,13 @@ function App() {
               }}
             >
               Event
+            </Nav.Link>
+            <Nav.Link
+              onClick={() => {
+                navigate("/cart");
+              }}
+            >
+              장바구니
             </Nav.Link>
           </Nav>
         </Container>
@@ -96,6 +108,7 @@ function App() {
           }
         />
         <Route path="/detail/:id" element={<Detail shoes={shoes} />} />
+        <Route path="/cart" element={<Cart />}></Route>
 
         <Route path="/about" element={<About />}>
           <Route path="member" element={<div>멤버</div>} />
