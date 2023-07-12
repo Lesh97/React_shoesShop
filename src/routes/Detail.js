@@ -15,6 +15,26 @@ function Detail(props) {
   let [tab, setTab] = useState(0);
   let [detailFade, setDetailFade] = useState("");
   let dispatch = useDispatch();
+
+  //디테일 페이지 로드
+  useEffect(() => {
+    //로컬스토리지에서 배열 데이터 가져오기 (최근 본 상품)
+    let watchedItem = localStorage.getItem("watched");
+    //있으면 상품 id 가져오기, 없으면 배열 만들기
+    if (watchedItem == null) {
+      localStorage.setItem("watched", JSON.stringify([]));
+    } else {
+      watchedItem = JSON.parse(watchedItem);
+    }
+    // 내가 본 상품 id 배열에 추가하기
+    watchedItem.push(id);
+    // 중복 제거 set함수
+    let removeDup = new Set(watchedItem);
+    let uniqueWatched = [...removeDup];
+    // 로컬스토리지에 내가 본 상품 id 추가하기
+    localStorage.setItem("watched", JSON.stringify(uniqueWatched));
+  }, []);
+
   //useEffect : 업데이트, 마운트시 작동
   useEffect(() => {
     //html이 랜더링되고 나서 실행됨. 복잡한 연산을 뒤로 미뤄 효율성 증가

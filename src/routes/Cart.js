@@ -1,12 +1,20 @@
+import { memo, useMemo, useState } from "react";
 import { Table } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { addCount, minusCount } from "../store";
 
+function 함수() {}
+
 function Cart() {
   let state = useSelector((state) => state);
   let dispatch = useDispatch();
+  useMemo(() => {
+    return 함수();
+  }, []);
   return (
     <div>
+      <h6> {state.user}의 장바구니 </h6>
+
       <Table>
         <thead>
           <tr>
