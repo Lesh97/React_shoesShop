@@ -23,7 +23,7 @@ function App() {
       <Suspense fallback={<div>로딩중입니다 ...</div>}>
         <Routes>
           <Route
-            path="/"
+            path="/React_shoesShop"
             element={
               <>
                 <div className="main-bg"></div>
