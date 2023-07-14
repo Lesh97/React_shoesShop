@@ -6,6 +6,17 @@ import { Routes, Route, Outlet } from "react-router-dom";
 import Product from "./components/Product";
 import axios from "axios";
 import Header from "./components/Header";
+import firstVideoBg from "./videos/firstplayer.mp4";
+import secondVideoBg from "./videos/secondplayer.mp4";
+import Sandal from "./img/sandal1.jpg";
+import Soccer from "./img/soccershoes1.jpg";
+import {
+  SandalAndSoccer,
+  SandalAndSoccerFirst,
+  SandalAndSoccerSecond,
+  BuyBtn,
+  Footer,
+} from "./styled/HomeStyled";
 
 const Detail = lazy(() => import("./routes/Detail"));
 const Cart = lazy(() => import("./routes/Cart"));
@@ -26,7 +37,51 @@ function App() {
             path="/React_shoesShop"
             element={
               <>
-                <div className="main-bg"></div>
+                <div className="firstVideo">
+                  <video src={firstVideoBg} autoPlay muted></video>
+                  <div>
+                    <h4>07.14(금) - 07.20(목)</h4>
+                    <h1>Member Days</h1>
+                    <p>
+                      신발상점이 멤버데이즈에 여러분을 초대합니다. 오직
+                      신발상점에서 멤버들을 위한 다양한 제품과 혜택으로 여름
+                      스포츠와 함께 일상을 즐겨보세요.
+                    </p>
+                    <div>
+                      <div>자세히 보기</div>
+                      <div>멤버 가입 & 마케팅 수신동의</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="secondVideo">
+                  <video src={secondVideoBg} autoPlay muted></video>
+                  <div>
+                    <h4>09.14(목) - 10.20(수)</h4>
+                    <h1>워커 홀릭</h1>
+                    <p>
+                      신발상점의 워커홀릭. 오직 신발상점에서 워커홀러들을 위한
+                      다양한 제품과 혜택으로 가을과 겨울의 패션을 뽐내보세요.
+                    </p>
+                    <div>
+                      <div>자세히 보기</div>
+                    </div>
+                  </div>
+                </div>
+                <SandalAndSoccer>
+                  <SandalAndSoccerFirst>
+                    <img src={Sandal}></img>
+                    <BuyBtn>
+                      <div>구매하기</div>
+                    </BuyBtn>
+                  </SandalAndSoccerFirst>
+                  <SandalAndSoccerSecond>
+                    <img src={Soccer}></img>
+                    <BuyBtn>
+                      <div>구매하기</div>
+                    </BuyBtn>
+                  </SandalAndSoccerSecond>
+                  <div></div>
+                </SandalAndSoccer>
                 <div className="container">
                   <div className="row">
                     {shoes.map((a, i) => {
@@ -67,6 +122,10 @@ function App() {
                     상품 더보기
                   </button>
                 </div>
+                <Footer>
+                  <div>신발 상점</div>
+                  <div>Copyright &copy; 저작권은 없습니다.</div>
+                </Footer>
               </>
             }
           />

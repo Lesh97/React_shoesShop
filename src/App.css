@@ -8,3 +8,14 @@
 .App {
   text-align: center;
 }
+
+.first-video {
+  height: 100%;
+  width: 100%;
+}
+
+.first-video-content {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
