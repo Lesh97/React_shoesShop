@@ -16,7 +16,7 @@ export const TopHeader = styled.div`
 
 export const SearchInput = styled.div`
   width: 500px;
-  margin-left: 50px;
+  margin-left: 10px;
   input {
     border: none;
     border-bottom: solid #000 1px;

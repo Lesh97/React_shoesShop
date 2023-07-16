@@ -61,15 +61,7 @@ function Header() {
 
                   <Nav.Link
                     onClick={() => {
-                      navigate("/cart");
-                    }}
-                  >
-                    회원가입
-                  </Nav.Link>
-
-                  <Nav.Link
-                    onClick={() => {
-                      navigate("/cart");
+                      navigate("/login");
                     }}
                   >
                     로그인
@@ -88,7 +80,7 @@ function Header() {
               <Slash>|</Slash>
               <Nav.Link
                 onClick={() => {
-                  navigate("/cart");
+                  navigate("/newprod");
                 }}
               >
                 신상품
@@ -96,7 +88,7 @@ function Header() {
               <Slash>|</Slash>
               <Nav.Link
                 onClick={() => {
-                  navigate("/cart");
+                  navigate("/mens");
                 }}
               >
                 남성
@@ -104,7 +96,7 @@ function Header() {
               <Slash>|</Slash>
               <Nav.Link
                 onClick={() => {
-                  navigate("/cart");
+                  navigate("/womens");
                 }}
               >
                 여성
@@ -112,7 +104,7 @@ function Header() {
               <Slash>|</Slash>
               <Nav.Link
                 onClick={() => {
-                  navigate("/cart");
+                  navigate("/kids");
                 }}
               >
                 키즈
@@ -128,7 +120,7 @@ function Header() {
 
               <Nav.Link
                 onClick={() => {
-                  navigate("/cart");
+                  navigate("/like");
                 }}
               >
                 <FontAwesomeIcon icon={faHeart} />
