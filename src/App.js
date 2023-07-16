@@ -84,13 +84,13 @@ function App() {
                 </div>
                 <SandalAndSoccer>
                   <SandalAndSoccerFirst>
-                    <img src={Sandal}></img>
+                    <img src={Sandal} alt="sandal"></img>
                     <BuyBtn>
                       <div>구매하기</div>
                     </BuyBtn>
                   </SandalAndSoccerFirst>
                   <SandalAndSoccerSecond>
-                    <img src={Soccer}></img>
+                    <img src={Soccer} alt="soccer"></img>
                     <BuyBtn>
                       <div>구매하기</div>
                     </BuyBtn>

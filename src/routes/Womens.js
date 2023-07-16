@@ -6,8 +6,11 @@ import {
   MainProd,
   MainProdBox,
   ProdGrid,
+  MainTitle,
+  MainP,
 } from "../styled/SellingStyled";
 import SellingProd from "../components/SellingProd";
+import WomenMainImg from "../img/womenboots.jpg";
 
 export default function Womens() {
   const [data, setData] = useState([]);
@@ -36,7 +39,12 @@ export default function Womens() {
     <>
       <Wrapper>
         <MainProd>
-          <MainProdBox>크게 한개의 상품</MainProdBox>
+          <MainProdBox>
+            {" "}
+            <img src={WomenMainImg} alt="womenMainImg" />
+          </MainProdBox>
+          <MainTitle>부츠를 꼭 신고 싶은 날, 오늘이 바로 그런 날.</MainTitle>
+          <MainP>이번 시즌에 새롭게 부츠가 추가되었습니다.</MainP>
         </MainProd>
 
         <ProdGrid>

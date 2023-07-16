@@ -6,8 +6,11 @@ import {
   MainProd,
   MainProdBox,
   ProdGrid,
+  MainTitle,
+  MainP,
 } from "../styled/SellingStyled";
 import SellingProd from "../components/SellingProd";
+import KidsMainImg from "../img/kidsconverse.jpg";
 
 export default function Kids() {
   const [data, setData] = useState([]);
@@ -36,7 +39,14 @@ export default function Kids() {
     <>
       <Wrapper>
         <MainProd>
-          <MainProdBox>크게 한개의 상품</MainProdBox>
+          <MainProdBox>
+            {" "}
+            <img src={KidsMainImg} alt="kidsMainImg" />
+          </MainProdBox>
+          <MainTitle>
+            언제나 어디서나 어울리는 신발, 고민은 그만하고 데일리로 신어보세요
+          </MainTitle>
+          <MainP>신발에 대한 고민을 지워줄 컨버스 지금 바로 만나보세요</MainP>
         </MainProd>
 
         <ProdGrid>

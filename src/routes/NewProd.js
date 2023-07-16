@@ -6,8 +6,11 @@ import {
   MainProd,
   MainProdBox,
   ProdGrid,
+  MainTitle,
+  MainP,
 } from "../styled/SellingStyled";
 import SellingProd from "../components/SellingProd";
+import NewMainImg from "../img/roffer.jpg";
 
 export default function NewProd() {
   const [data, setData] = useState([]);
@@ -36,7 +39,14 @@ export default function NewProd() {
     <>
       <Wrapper>
         <MainProd>
-          <MainProdBox>크게 한개의 상품</MainProdBox>
+          <MainProdBox>
+            {" "}
+            <img src={NewMainImg} alt="newMainImg" />
+          </MainProdBox>
+          <MainTitle>로퍼의 세계로</MainTitle>
+          <MainP>
+            일상을 점령한 다양한 로퍼, 신발상점에 새롭게 추가되었습니다.
+          </MainP>
         </MainProd>
 
         <ProdGrid>
