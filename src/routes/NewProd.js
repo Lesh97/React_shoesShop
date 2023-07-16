@@ -9,7 +9,7 @@ import {
 } from "../styled/SellingStyled";
 import SellingProd from "../components/SellingProd";
 
-export default function Womens() {
+export default function NewProd() {
   const [data, setData] = useState([]);
   const shoppingData = async () => {
     const URL = "v1/search/shop.json";
@@ -18,7 +18,7 @@ export default function Womens() {
 
     await axios
       .get(URL, {
-        params: { query: "여성신발", display: 20 },
+        params: { query: "신발", sort: "date", display: 20 },
         headers: {
           "X-Naver-Client-Id": clientID,
           "X-Naver-Client-Secret": clientSecret,

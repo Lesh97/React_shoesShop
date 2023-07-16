@@ -13,7 +13,7 @@ export const MainProd = styled.div`
 `;
 
 //남자 메인 상품
-export const MenMainProd = styled.div`
+export const MainProdBox = styled.div`
   width: 50%;
   height: 500px;
   background-color: blue;
@@ -25,14 +25,38 @@ export const ProdGrid = styled.div`
   grid-template-columns: repeat(5, minmax(auto, 1fr));
   grid-template-rows: repeat(4, minmax(auto, 1fr));
   margin: 50px 120px;
-  grid-gap: 100px;
+  grid-gap: 50px;
   height: 100%;
   justify-content: center;
   align-items: center;
 `;
 
-//판매 페이지 상품 낱개
-export const GridBox = styled.div`
-  height: 300px;
-  background-color: red;
+export const ProdWrapper = styled.div`
+  img {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 20px;
+  }
+`;
+
+export const ProdTitle = styled.h3`
+  width: 300px;
+  font-weight: 800;
+  text-overflow: clip;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 20px;
+`;
+
+export const ProdBrand = styled.p`
+  width: 300px;
+  text-align: center;
+  font-size: 20px;
+`;
+
+export const ProdPrice = styled.p`
+  width: 300px;
+  text-align: center;
+  font-size: 28px;
 `;

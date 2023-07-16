@@ -1,27 +1,48 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import {
   Wrapper,
   MainProd,
-  MenMainProd,
+  MainProdBox,
   ProdGrid,
-  GridBox,
 } from "../styled/SellingStyled";
-export default function Kids(props) {
+import SellingProd from "../components/SellingProd";
+
+export default function Kids() {
+  const [data, setData] = useState([]);
+  const shoppingData = async () => {
+    const URL = "v1/search/shop.json";
+    const clientID = "AUV7CwG2zS8l0H9eAJ_N";
+    const clientSecret = "b4QgvJwMmy";
+
+    await axios
+      .get(URL, {
+        params: { query: "키즈신발", display: 20 },
+        headers: {
+          "X-Naver-Client-Id": clientID,
+          "X-Naver-Client-Secret": clientSecret,
+        },
+      })
+      .then((res) => setData(res.data.items))
+      .catch((e) => {});
+  };
+  useEffect(() => {
+    shoppingData();
+  }, []);
+
+  console.log(data);
   return (
     <>
       <Wrapper>
         <MainProd>
-          <MenMainProd>키즈신발 크게 한개의 상품</MenMainProd>
+          <MainProdBox>크게 한개의 상품</MainProdBox>
         </MainProd>
 
         <ProdGrid>
-          <GridBox>상품 그리드</GridBox>
-          <GridBox>상품 그리드</GridBox>
-          <GridBox>상품 그리드</GridBox>
-          <GridBox>상품 그리드</GridBox>
-          <GridBox>상품 그리드</GridBox>
-          <GridBox>상품 그리드</GridBox>
-          <GridBox>상품 그리드</GridBox>
+          {data.map((a, i) => {
+            return <SellingProd data={data[i]} i={i} />;
+          })}
         </ProdGrid>
       </Wrapper>
       <Footer></Footer>

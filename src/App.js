@@ -26,7 +26,7 @@ import {
 import Footer from "./components/Footer";
 import About from "./routes/About";
 import Event from "./routes/Event";
-import NewProd from "./routes/NewPord";
+import NewProd from "./routes/NewProd";
 import Mens from "./routes/Mens";
 import Womens from "./routes/Womens";
 import Kids from "./routes/Kids";
