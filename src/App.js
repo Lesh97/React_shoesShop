@@ -30,6 +30,9 @@ import NewProd from "./routes/NewProd";
 import Mens from "./routes/Mens";
 import Womens from "./routes/Womens";
 import Kids from "./routes/Kids";
+import Like from "./routes/Like";
+import Login from "./routes/Login";
+import SignUp from "./routes/SignUp";
 
 const Detail = lazy(() => import("./routes/Detail"));
 const Cart = lazy(() => import("./routes/Cart"));
@@ -144,6 +147,7 @@ function App() {
           />
           <Route path="/detail/:id" element={<Detail shoes={shoes} />} />
           <Route path="/cart" element={<Cart />}></Route>
+          <Route path="/like" element={<Like />}></Route>
 
           <Route path="/about" element={<About />}>
             <Route path="member" element={<div>이수현</div>} />
@@ -159,8 +163,12 @@ function App() {
           <Route path="/womens" element={<Womens />}></Route>
           <Route path="/kids" element={<Kids />}></Route>
 
+          <Route path="/signup" element={<SignUp />}></Route>
+          <Route path="/login" element={<Login />}></Route>
+
           <Route path="*" element={<div>404</div>} />
         </Routes>
+        <Routes></Routes>
       </Suspense>
     </div>
   );
