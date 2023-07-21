@@ -54,6 +54,7 @@
   },
   "proxy": "https://openapi.naver.com",
   "devDependencies": {
-    "@types/navermaps": "^3.6.5"
+    "@types/navermaps": "^3.6.5",
+    "gh-pages": "^5.0.0"
   }
 }
