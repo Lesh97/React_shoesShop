@@ -36,7 +36,7 @@ export default function SignUp() {
               value={form.password}
               onChange={(e) => setForm({ ...form, password: e.target.value })}
             ></SignUpPw>
-            <ValidDiv>1</ValidDiv>
+            <ValidDiv></ValidDiv>
             <SignUpP>패스워드 확인</SignUpP>
             <SignUpPwConfirm
               placeholder="비밀번호를 한번 더 입력하세요"
@@ -46,7 +46,7 @@ export default function SignUp() {
                 setForm({ ...form, passwordConfirm: e.target.value })
               }
             ></SignUpPwConfirm>
-            <ValidDiv>2</ValidDiv>
+            <ValidDiv></ValidDiv>
             <SignUpP>이름</SignUpP>
             <SignUpName placeholder="이름을 입력하세요"></SignUpName>
             <SignUpP>전화번호</SignUpP>

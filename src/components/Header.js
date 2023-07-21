@@ -14,7 +14,6 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCartShopping,
-  faHeart,
   faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
 import { useQuery } from "@tanstack/react-query";
@@ -115,16 +114,9 @@ function Header() {
               <Nav className="ms-auto">
                 {result.isLoading && "로딩중"}
                 {result.error && "에러발생"}
-                {result.data && result.data.name} 님
+                로그인 해주세요
               </Nav>
 
-              <Nav.Link
-                onClick={() => {
-                  navigate("/like");
-                }}
-              >
-                <FontAwesomeIcon icon={faHeart} />
-              </Nav.Link>
               <Nav.Link
                 onClick={() => {
                   navigate("/cart");

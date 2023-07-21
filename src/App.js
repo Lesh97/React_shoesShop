@@ -30,9 +30,10 @@ import NewProd from "./routes/NewProd";
 import Mens from "./routes/Mens";
 import Womens from "./routes/Womens";
 import Kids from "./routes/Kids";
-import Like from "./routes/Like";
 import Login from "./routes/Login";
 import SignUp from "./routes/SignUp";
+import { FirstEvent, SecondEvent } from "./components/EventDetail";
+import { Location, Member } from "./components/AboutDetail.tsx";
 
 const Detail = lazy(() => import("./routes/Detail"));
 const Cart = lazy(() => import("./routes/Cart"));
@@ -147,16 +148,15 @@ function App() {
           />
           <Route path="/detail/:id" element={<Detail shoes={shoes} />} />
           <Route path="/cart" element={<Cart />}></Route>
-          <Route path="/like" element={<Like />}></Route>
 
           <Route path="/about" element={<About />}>
-            <Route path="member" element={<div>이수현</div>} />
-            <Route path="location" element={<div>내 컴퓨터</div>} />
+            <Route path="member" element={<Member />} />
+            <Route path="location" element={<Location />} />
           </Route>
 
           <Route path="/event" element={<Event />}>
-            <Route path="one" element={<p>첫 주문시 양배추즙 서비스</p>} />
-            <Route path="two" element={<p>생일기념 쿠폰받기</p>} />
+            <Route path="one" element={<FirstEvent />} />
+            <Route path="two" element={<SecondEvent hh={1} mm={1} ss={10} />} />
           </Route>
           <Route path="/newprod" element={<NewProd />}></Route>
           <Route path="/mens" element={<Mens />}></Route>

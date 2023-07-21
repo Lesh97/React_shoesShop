@@ -85,3 +85,32 @@ export const ProdPrice = styled.p`
   text-align: center;
   font-size: 28px;
 `;
+
+// 이벤트 css
+
+export const EventWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+`;
+
+export const EventTitle = styled.h2`
+  margin: 30px 0px;
+  font-weight: 800;
+  font-size: 40px;
+`;
+
+export const EventLink = styled.a`
+  margin: 0px 30px;
+`;
+
+// 첫번째 이벤트
+
+export const FirstEventDiv = styled.div`
+  margin: 30px 0px;
+`;
+
+// 두번째 이벤트
+
+export const SecondEventDiv = styled.div`
+  margin: 30px 0px;
+`;
