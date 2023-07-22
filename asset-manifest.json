@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/React_shoesShop/static/css/main.1a463886.css",
-    "main.js": "/React_shoesShop/static/js/main.17c17690.js",
+    "main.js": "/React_shoesShop/static/js/main.d2f9540f.js",
     "static/js/768.df39a47d.chunk.js": "/React_shoesShop/static/js/768.df39a47d.chunk.js",
     "static/js/149.59f5acff.chunk.js": "/React_shoesShop/static/js/149.59f5acff.chunk.js",
     "static/js/787.22682adb.chunk.js": "/React_shoesShop/static/js/787.22682adb.chunk.js",
@@ -17,13 +17,13 @@
     "static/media/saleCoupontwenty.jpg": "/React_shoesShop/static/media/saleCoupontwenty.a68103f9bd1830522ec4.jpg",
     "index.html": "/React_shoesShop/index.html",
     "main.1a463886.css.map": "/React_shoesShop/static/css/main.1a463886.css.map",
-    "main.17c17690.js.map": "/React_shoesShop/static/js/main.17c17690.js.map",
+    "main.d2f9540f.js.map": "/React_shoesShop/static/js/main.d2f9540f.js.map",
     "768.df39a47d.chunk.js.map": "/React_shoesShop/static/js/768.df39a47d.chunk.js.map",
     "149.59f5acff.chunk.js.map": "/React_shoesShop/static/js/149.59f5acff.chunk.js.map",
     "787.22682adb.chunk.js.map": "/React_shoesShop/static/js/787.22682adb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1a463886.css",
-    "static/js/main.17c17690.js"
+    "static/js/main.d2f9540f.js"
   ]
 }
