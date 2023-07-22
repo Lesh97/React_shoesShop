@@ -23,10 +23,6 @@ export function Member() {
         디자인
         <MemberH3>디자인 : 이수현</MemberH3>
       </MemberTitle>
-      <MemberTitle>
-        멘토
-        <MemberH3>코딩애플</MemberH3>
-      </MemberTitle>
     </>
   );
 }
