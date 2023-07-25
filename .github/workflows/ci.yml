@@ -3,10 +3,10 @@ on: push
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      REACT_APP_CLIENTID: ${{secrets.REACT_APP_CLIENTID}}
+      REACT_APP_CLIENTSECRET: ${{secrets.REACT_APP_CLIENTSECRET}}
     steps:
       - uses: actions/checkout@v3
-      - run: npm ci
-      - name: write CLIENT ID
-        run: echo "REACT_APP_CLIENTID=${{secrets.REACT_APP_CLIENTID}}" >> env.yml
-      - name: write CLIENT SECRET
-        run: echo "REACT_APP_CLIENTSECRET=${{secrets.REACT_APP_CLIENTSECRET}}" >> env.yml
+      - run: echo $REACT_APP_CLIENTID
+      - run: echo $REACT_APP_CLIENTSECRET
