@@ -1,7 +1,7 @@
 name: env push
 on: push
 jobs:
-  checkout:
+  build:
     runs-on: ubuntu-latest
     steps:
       - run: ls -al
