@@ -4,10 +4,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: ls -al
       - uses: actions/checkout@v3
       - run: npm ci
-      - name: write CLIENT ID
-        run: echo "REACT_APP_CLIENTID=${{secrets.REACT_APP_CLIENTID}}" >> env.yml
-      - name: write CLIENT SECRET
-        run: echo "REACT_APP_CLIENTSECRET=${{secrets.REACT_APP_CLIENTSECRET}}" >> env.yml
+      - name: Create Sentry release
+        uses: getsentry/action-release@v1
+        env:
+          REACT_APP_CLIENTID: ${{ secrets.REACT_APP_CLIENTID }}
+          REACT_APP_CLIENTSECRET: ${{ secrets.REACT_APP_CLIENTSECRET }}
