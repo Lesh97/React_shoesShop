@@ -7,8 +7,16 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./store.js";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import * as Sentry from "@sentry/react";
+import { Integrations } from "@sentry/tracing";
 
 const queryClient = new QueryClient();
+Sentry.init({
+  dsn: "https://202d4ca1e4d5427ea6242f0013d79bae@o4505589508866048.ingest.sentry.io/4505589510045696",
+  integrations: [new Integrations.BrowserTracing()],
+
+  tracesSampleRate: 1.0,
+});
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
