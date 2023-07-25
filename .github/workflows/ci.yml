@@ -10,9 +10,3 @@ jobs:
         run: echo "REACT_APP_CLIENTID=${{secrets.REACT_APP_CLIENTID}}" >> env.yml
       - name: write CLIENT SECRET
         run: echo "REACT_APP_CLIENTSECRET=${{secrets.REACT_APP_CLIENTSECRET}}" >> env.yml
-      - name: Create Sentry release
-        uses: getsentry/action-release@v1
-        env:
-          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
-          SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
-          SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
