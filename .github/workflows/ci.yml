@@ -1,0 +1,12 @@
+name: env push
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: action/checkout@v3
+      - run: npm ci
+      - name: write CLIENT ID
+        run: echo "REACT_APP_CLIENTID=${{secrets.REACT_APP_CLIENTID}}" >> env.yml
+      - name: write CLIENT SECRET
+        run: echo "REACT_APP_CLIENTSECRET=${{secrets.REACT_APP_CLIENTSECRET}}" >> env.yml
