@@ -1,9 +1,10 @@
 name: env push
 on: push
 jobs:
-  build:
+  checkout:
     runs-on: ubuntu-latest
     steps:
+      - run: ls -al
       - uses: action/checkout@v3
       - run: npm ci
       - name: write CLIENT ID
