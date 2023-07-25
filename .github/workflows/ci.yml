@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: ls -al
-      - uses: action/checkout@v3
+      - uses: actions/checkout@v3
       - run: npm ci
       - name: write CLIENT ID
         run: echo "REACT_APP_CLIENTID=${{secrets.REACT_APP_CLIENTID}}" >> env.yml
