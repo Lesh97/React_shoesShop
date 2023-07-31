@@ -49,9 +49,10 @@ export default function NewProd() {
         </MainProd>
 
         <ProdGrid>
-          {data.map((a, i) => {
-            return <SellingProd data={data[i]} i={i} />;
-          })}
+          {data &&
+            data.map((a, i) => {
+              return <SellingProd data={data[i]} i={i} />;
+            })}
         </ProdGrid>
       </Wrapper>
       <Footer></Footer>
