@@ -13,10 +13,8 @@ import SellingProd from "../components/SellingProd";
 import KidsMainImg from "../img/kidsconverse.jpg";
 
 export default function Kids() {
-  const [loading, setLoading] = useState(false);
   const [data, setData] = useState([]);
   const shoppingData = async () => {
-    setLoading(true);
     try {
       const URL = "/v1/search/shop.json";
       const clientID = "AUV7CwG2zS8l0H9eAJ_N";
@@ -35,17 +33,11 @@ export default function Kids() {
     } catch (error) {
       console.log(error);
     }
-    setLoading(false);
   };
   useEffect(() => {
     shoppingData();
   }, []);
-  if (loading) {
-    return <div>로딩중...</div>;
-  }
-  if (!data) {
-    return <div>제품을 불러오지 못했습니다.</div>;
-  }
+
   console.log(data);
   console.log(setData);
   console.log(shoppingData);
