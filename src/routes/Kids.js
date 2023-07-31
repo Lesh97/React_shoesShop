@@ -34,6 +34,8 @@ export default function Kids() {
     shoppingData();
   }, []);
 
+  console.log(data);
+
   return (
     <>
       <Wrapper>
