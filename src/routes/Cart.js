@@ -1,4 +1,4 @@
-import { memo, useMemo, useState } from "react";
+import { useMemo } from "react";
 import { Table } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { addCount, minusCount } from "../store";

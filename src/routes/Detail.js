@@ -8,7 +8,7 @@ import "../App.css";
 function Detail(props) {
   let { id } = useParams();
   let findProd = props.shoes.find(function (f) {
-    return f.id == id;
+    return f.id === id;
   });
   let [countdown, setCountdown] = useState(true);
   let [warning, setWarning] = useState("");
@@ -33,7 +33,7 @@ function Detail(props) {
     let uniqueWatched = [...removeDup];
     // 로컬스토리지에 내가 본 상품 id 추가하기
     localStorage.setItem("watched", JSON.stringify(uniqueWatched));
-  }, []);
+  }, [id]);
 
   //useEffect : 업데이트, 마운트시 작동
   useEffect(() => {
@@ -47,7 +47,7 @@ function Detail(props) {
   }, []);
 
   useEffect(() => {
-    if (isNaN(warning) == true) {
+    if (isNaN(warning) === true) {
       alert("숫자만 입력하세요");
     }
   }, [warning]);
