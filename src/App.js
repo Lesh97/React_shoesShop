@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import data from "./data";
 import { lazy, Suspense, useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { HashRouter as Routes, Route } from "react-router-dom";
 import Product from "./components/Product";
 import axios from "axios";
 import Header from "./components/Header";
