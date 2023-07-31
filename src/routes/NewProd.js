@@ -15,7 +15,7 @@ import NewMainImg from "../img/roffer.jpg";
 export default function NewProd() {
   const [data, setData] = useState([]);
   const shoppingData = async () => {
-    const URL = "v1/search/shop.json";
+    const URL = "/v1/search/shop.json";
     const clientID = "AUV7CwG2zS8l0H9eAJ_N";
     const clientSecret = "b4QgvJwMmy";
 
