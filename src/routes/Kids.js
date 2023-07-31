@@ -29,13 +29,16 @@ export default function Kids() {
       })
       .then((res) => setData(res.data.items))
       .catch((e) => {});
+    console.log(URL);
+    console.log(clientID);
+    console.log(clientSecret);
   };
   useEffect(() => {
     shoppingData();
   }, []);
 
   console.log(data);
-
+  console.log(shoppingData);
   return (
     <>
       <Wrapper>
