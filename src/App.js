@@ -51,7 +51,7 @@ function App() {
       <Suspense fallback={<div>로딩중입니다 ...</div>}>
         <Routes>
           <Route
-            path="/React_shoesShop"
+            path="/"
             element={
               <>
                 <div className="firstVideo">
@@ -105,7 +105,7 @@ function App() {
                   <Steady>Steady Seller</Steady>
                   <div className="row">
                     {shoes.map((a, i) => {
-                      return <Product shoes={shoes[i]} i={i} />;
+                      return <Product shoes={shoes[i]} i={i} key={i} />;
                     })}
                   </div>
                   <SteadyBtn

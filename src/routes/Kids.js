@@ -15,23 +15,26 @@ import KidsMainImg from "../img/kidsconverse.jpg";
 export default function Kids() {
   const [data, setData] = useState([]);
   const shoppingData = async () => {
-    const URL = "/v1/search/shop.json";
-    const clientID = "AUV7CwG2zS8l0H9eAJ_N";
-    const clientSecret = "b4QgvJwMmy";
+    try {
+      const URL = "/v1/search/shop.json";
+      const clientID = "AUV7CwG2zS8l0H9eAJ_N";
+      const clientSecret = "b4QgvJwMmy";
 
-    await axios
-      .get(URL, {
-        params: { query: "키즈신발", display: 20 },
-        headers: {
-          "X-Naver-Client-Id": clientID,
-          "X-Naver-Client-Secret": clientSecret,
-        },
-      })
-      .then((res) => setData(res.data.items))
-      .catch((e) => {});
-    console.log(URL);
-    console.log(clientID);
-    console.log(clientSecret);
+      await axios
+        .get(URL, {
+          params: { query: "키즈신발", display: 20 },
+          headers: {
+            "X-Naver-Client-Id": clientID,
+            "X-Naver-Client-Secret": clientSecret,
+          },
+        })
+        .then((res) => setData(res.data.items))
+        .catch((e) => {});
+      console.log("yes");
+    } catch (error) {
+      console.error(error);
+      console.log("no");
+    }
   };
   useEffect(() => {
     shoppingData();
@@ -56,7 +59,7 @@ export default function Kids() {
         <ProdGrid>
           {data &&
             data.map((a, i) => {
-              return <SellingProd data={data[i]} i={i} />;
+              return <SellingProd data={data[i]} i={i} key={i} />;
             })}
         </ProdGrid>
       </Wrapper>

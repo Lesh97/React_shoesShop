@@ -37,7 +37,7 @@ function Header() {
         <Container>
           <Wrapper>
             <TopHeader>
-              <Navbar.Brand href="/React_shoesShop">Shoe Shop</Navbar.Brand>
+              <Navbar.Brand href="/">Shoe Shop</Navbar.Brand>
               <SearchInput>
                 <FontAwesomeIcon icon={faMagnifyingGlass} />
                 <input

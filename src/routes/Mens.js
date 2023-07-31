@@ -48,7 +48,7 @@ export default function Mens() {
         <ProdGrid>
           {data &&
             data.map((a, i) => {
-              return <SellingProd data={data[i]} i={i} />;
+              return <SellingProd data={data[i]} i={i} key={i} />;
             })}
         </ProdGrid>
       </Wrapper>
