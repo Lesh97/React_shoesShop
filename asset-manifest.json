@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/React_shoesShop/static/css/main.1a463886.css",
-    "main.js": "/React_shoesShop/static/js/main.2edfdd59.js",
-    "static/js/768.df39a47d.chunk.js": "/React_shoesShop/static/js/768.df39a47d.chunk.js",
-    "static/js/149.59f5acff.chunk.js": "/React_shoesShop/static/js/149.59f5acff.chunk.js",
-    "static/js/787.22682adb.chunk.js": "/React_shoesShop/static/js/787.22682adb.chunk.js",
-    "static/media/secondplayer.mp4": "/React_shoesShop/static/media/secondplayer.6eb63058afa58c251450.mp4",
-    "static/media/firstplayer.mp4": "/React_shoesShop/static/media/firstplayer.e0ff30ba6be832bad112.mp4",
-    "static/media/womenboots.jpg": "/React_shoesShop/static/media/womenboots.55bed4a284f32de70e36.jpg",
-    "static/media/kidsconverse.jpg": "/React_shoesShop/static/media/kidsconverse.510883df656757342799.jpg",
-    "static/media/roffer.jpg": "/React_shoesShop/static/media/roffer.3e83bdc4ab4bed5fd817.jpg",
-    "static/media/menrofferfix.jpg": "/React_shoesShop/static/media/menrofferfix.aa7ed22524100c1784e9.jpg",
-    "static/media/sandal1.jpg": "/React_shoesShop/static/media/sandal1.6437eb9737c419a3e4fc.jpg",
-    "static/media/soccershoes1.jpg": "/React_shoesShop/static/media/soccershoes1.8682e133a4f75d5cd1a4.jpg",
-    "static/media/saleCouponten.jpg": "/React_shoesShop/static/media/saleCouponten.69303cbfcee2e4057798.jpg",
-    "static/media/saleCoupontwenty.jpg": "/React_shoesShop/static/media/saleCoupontwenty.a68103f9bd1830522ec4.jpg",
-    "index.html": "/React_shoesShop/index.html",
-    "main.1a463886.css.map": "/React_shoesShop/static/css/main.1a463886.css.map",
-    "main.2edfdd59.js.map": "/React_shoesShop/static/js/main.2edfdd59.js.map",
-    "768.df39a47d.chunk.js.map": "/React_shoesShop/static/js/768.df39a47d.chunk.js.map",
-    "149.59f5acff.chunk.js.map": "/React_shoesShop/static/js/149.59f5acff.chunk.js.map",
-    "787.22682adb.chunk.js.map": "/React_shoesShop/static/js/787.22682adb.chunk.js.map"
+    "main.css": "./static/css/main.1a463886.css",
+    "main.js": "./static/js/main.cc4187df.js",
+    "static/js/768.b5717ea8.chunk.js": "./static/js/768.b5717ea8.chunk.js",
+    "static/js/149.59f5acff.chunk.js": "./static/js/149.59f5acff.chunk.js",
+    "static/js/787.22682adb.chunk.js": "./static/js/787.22682adb.chunk.js",
+    "static/media/secondplayer.mp4": "./static/media/secondplayer.6eb63058afa58c251450.mp4",
+    "static/media/firstplayer.mp4": "./static/media/firstplayer.e0ff30ba6be832bad112.mp4",
+    "static/media/womenboots.jpg": "./static/media/womenboots.55bed4a284f32de70e36.jpg",
+    "static/media/kidsconverse.jpg": "./static/media/kidsconverse.510883df656757342799.jpg",
+    "static/media/roffer.jpg": "./static/media/roffer.3e83bdc4ab4bed5fd817.jpg",
+    "static/media/menrofferfix.jpg": "./static/media/menrofferfix.aa7ed22524100c1784e9.jpg",
+    "static/media/sandal1.jpg": "./static/media/sandal1.6437eb9737c419a3e4fc.jpg",
+    "static/media/soccershoes1.jpg": "./static/media/soccershoes1.8682e133a4f75d5cd1a4.jpg",
+    "static/media/saleCouponten.jpg": "./static/media/saleCouponten.69303cbfcee2e4057798.jpg",
+    "static/media/saleCoupontwenty.jpg": "./static/media/saleCoupontwenty.a68103f9bd1830522ec4.jpg",
+    "index.html": "./index.html",
+    "main.1a463886.css.map": "./static/css/main.1a463886.css.map",
+    "main.cc4187df.js.map": "./static/js/main.cc4187df.js.map",
+    "768.b5717ea8.chunk.js.map": "./static/js/768.b5717ea8.chunk.js.map",
+    "149.59f5acff.chunk.js.map": "./static/js/149.59f5acff.chunk.js.map",
+    "787.22682adb.chunk.js.map": "./static/js/787.22682adb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1a463886.css",
-    "static/js/main.2edfdd59.js"
+    "static/js/main.cc4187df.js"
   ]
 }
