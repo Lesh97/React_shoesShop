@@ -16,7 +16,7 @@ export default function Kids() {
   const [data, setData] = useState([]);
   const shoppingData = async () => {
     try {
-      const URL = "/v1/search/shop.json";
+      const URL = "https://cors-anywhere.herokuapp.com/v1/search/shop.json";
       const clientID = "AUV7CwG2zS8l0H9eAJ_N";
       const clientSecret = "b4QgvJwMmy";
 
@@ -38,9 +38,6 @@ export default function Kids() {
     shoppingData();
   }, []);
 
-  console.log(data);
-  console.log(setData);
-  console.log(shoppingData);
   return (
     <>
       <Wrapper>

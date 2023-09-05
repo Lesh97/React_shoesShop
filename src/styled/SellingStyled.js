@@ -26,7 +26,6 @@ opacity: 0;
 
 //메인 상품
 export const MainProdBox = styled.div`
-  width: 50%;
   height: 800px;
   margin-bottom: 40px;
   img {
@@ -49,11 +48,12 @@ export const ProdGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(5, minmax(auto, 1fr));
   grid-template-rows: repeat(4, minmax(auto, 1fr));
-  margin: 100px 120px;
+  margin-top: 50px;
   grid-gap: 50px;
   height: 100%;
   justify-content: center;
   align-items: center;
+  width: 100%;
 `;
 
 export const ProdWrapper = styled.div`
